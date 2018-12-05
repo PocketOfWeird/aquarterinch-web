@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'antd/lib/button';
+import LoginButton from './LoginButton';
 import logo from '../logo.svg';
 
 const HomeUnlogged = (props) => (
@@ -9,7 +9,7 @@ const HomeUnlogged = (props) => (
       <p>
         Welcome to A Quarter Inch
       </p>
-      <Button type="primary">Login</Button>
+      <LoginButton />
     </header>
   </div>
 );

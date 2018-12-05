@@ -5,7 +5,9 @@ import HomeUnlogged from './components/HomeUnlogged';
 
 const Routes = () => (
     <Router>
-        <Route path="/" exact component={HomeUnlogged} />
+        <div>
+            <Route path="/" exact component={HomeUnlogged} />
+        </div>
     </Router>
 );
 
