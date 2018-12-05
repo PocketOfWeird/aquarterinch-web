@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
-import Button from 'antd/lib/button';
-import logo from './logo.svg';
+import { Provider } from 'react-firebase';
+import { initializeApp } from 'firebase';
+import settings from './tools/settings';
+import Routes from './Routes.js';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Welcome to A Quarter Inch
-          </p>
-          <Button type="primary">Login</Button>
-        </header>
-      </div>
-    );
-  }
-}
+
+const firebaseApp = initializeApp(settings.firebase);
+
+const App = (props) => (
+    <Provider firebaseApp={firebaseApp}>
+        <Routes />
+    </Provider>
+);
 
 export default App;
