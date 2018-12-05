@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomeUnlogged from './components/HomeUnlogged';
 
 
-const Routes = (props) => (
-    <div>
+const Routes = () => (
+    <Router>
         <Route path="/" exact component={HomeUnlogged} />
-    </div>
+    </Router>
 );
 
 export default Routes;

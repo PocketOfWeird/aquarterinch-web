@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'antd/lib/button';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 const HomeUnlogged = (props) => (
   <div className="App">

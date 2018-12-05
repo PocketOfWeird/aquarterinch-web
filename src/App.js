@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from 'react-firebase';
 import { initializeApp } from 'firebase';
 import settings from './tools/settings';
