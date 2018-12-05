@@ -1,11 +1,8 @@
 import React from 'react';
-import firebase from 'firebase/app';
-import settings from './tools/settings';
-import Routes from './Routes.js';
+import Routes from './components/Routes.js';
 import './App.css';
+import './tools/initFirebase';
 
-
-firebase.initializeApp(settings.firebase);
 
 const App = (props) => (
     <Routes />

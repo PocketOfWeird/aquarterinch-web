@@ -4,7 +4,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 
-class LoginButton extends Component {
+class LogoutButton extends Component {
     constructor(props) {
       super(props);
       // Don't call this.setState() here!
@@ -12,19 +12,18 @@ class LoginButton extends Component {
       this.login = this.login.bind(this);
     }
 
-    login() {
-        let provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithRedirect(provider);
+    logout() {
+        firebase.auth().signOut();
     }
 
     render() {
         return (
-            <Button type="primary" icon="google" size="large" onClick={this.login}>
-                Login with Google
+            <Button type="primary" icon="google" size="large" onClick={this.logout}>
+                Logout of Google
             </Button>
         );
     }
 
 }
 
-export default LoginButton;
+export default LogoutButton;

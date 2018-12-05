@@ -2,7 +2,7 @@ import React from 'react';
 import LoginButton from './LoginButton';
 import logo from '../logo.svg';
 
-const HomeUnlogged = (props) => (
+const Welcome = (props) => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
@@ -14,4 +14,4 @@ const HomeUnlogged = (props) => (
   </div>
 );
 
-export default HomeUnlogged;
+export default Welcome;
