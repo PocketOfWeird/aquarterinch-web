@@ -7,8 +7,6 @@ import 'firebase/auth';
 class LogoutButton extends Component {
     constructor(props) {
       super(props);
-      // Don't call this.setState() here!
-      this.state = { counter: 0 };
       this.login = this.login.bind(this);
     }
 

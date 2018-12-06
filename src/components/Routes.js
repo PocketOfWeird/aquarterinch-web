@@ -5,13 +5,13 @@ import Welcome from './Welcome';
 import Home from './Home';
 
 
-const Routes = () => (
-    <Router>
-        <div>
-            <Route path="/" exact component={Home} />
-            <OpenRoute path="/welcome" component={Welcome} />
-        </div>
-    </Router>
+const Routes = (props) => (
+   <Router>
+       <div>
+           <Route path="/" exact component={Home} {...props} />
+           <OpenRoute path="/welcome" component={Welcome} {...props} />
+       </div>
+   </Router>
 );
 
 export default Routes;
