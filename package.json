@@ -1,29 +1,49 @@
 {
   "name": "aquarterinch-web",
   "version": "0.1.0",
+  "description": "Web version of A Quarter Inch budget application",
+  "author": "hartzlernathan@gmail.com",
   "private": true,
-  "dependencies": {
-    "antd": "^3.11.0",
-    "firebase": "^5.6.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-firebase": "^2.2.8",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
+    "serve": "http-server -o -c 1 -a localhost",
+    "dev": "npm-run-all --parallel watchify serve",
+    "lint": "eslint --ext .js,.vue src",
+    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/build.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "browserify": {
+    "transform": [
+      "babelify",
+      "vueify"
+    ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "dependencies": {
+    "firebase": "^5.6.0",
+    "vue": "^2.0.1",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-runtime": "^6.0.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.1.0",
+    "browserify-hmr": "^0.3.1",
+    "cross-env": "^2.0.0",
+    "envify": "^3.4.1",
+    "eslint": "^3.3.0",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-html": "^1.5.2",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^2.3.0",
+    "proxyquireify": "^3.0.1",
+    "uglify-js": "^2.5.0",
+    "vueify": "^9.0.0",
+    "watchify": "^3.4.0"
+  }
 }
