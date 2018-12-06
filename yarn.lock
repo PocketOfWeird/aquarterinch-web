@@ -2737,6 +2737,20 @@ finalhandler@1.1.1:
     statuses "~1.4.0"
     unpipe "~1.0.0"
 
+find-and-replace-anything@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/find-and-replace-anything/-/find-and-replace-anything-1.2.0.tgz#d2f2b69718da4e7aee363441d42485274cf79a2d"
+  integrity sha512-Dlk3Ks3Ttq2F49qkhfOcPJ/tL7c4wFKHcwPFfKM6vJ/bJ8rAecZGNqbnglADKSFmM6lysbaVeJaJ78uUPcT9KQ==
+  dependencies:
+    is-what "^3.0.1"
+
+find-and-replace-anything@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/find-and-replace-anything/-/find-and-replace-anything-2.0.0.tgz#2d5e6ff5d4790ca00bae53ec21dd1158e4786425"
+  integrity sha512-Sa4cD3Figdl7P6ZoVNpZOG/HBHjQEZ6vZqTteNzpdk6fFTq9fH6mb54zX05+jPVYZe2RsxFDCYUehp+z9vKTaQ==
+  dependencies:
+    is-what "^3.1.1"
+
 find-up@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
@@ -3514,6 +3528,11 @@ is-utf8@^0.2.0:
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
   integrity sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=
 
+is-what@^3.0.1, is-what@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/is-what/-/is-what-3.1.1.tgz#3a22d7f38fc50ffa58cd29b29f0450c489afd65d"
+  integrity sha512-zJfgPtIFG4G9tdJraBhkYxKF7TtSBADu7FLqV544UlzCwfZxOV5lhvRcRpcoT+C/dRf4npOaBVFRHuqD3XXqJw==
+
 is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
@@ -3864,6 +3883,13 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+merge-anything@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/merge-anything/-/merge-anything-2.2.0.tgz#aeb2b1fc3c75946f4dcf6a4424807219a2a6942b"
+  integrity sha512-/dmPRLl9LxBsKDakFAweVksRI4YpUYycX58gl2X7bNw/QpIfSyBpMrvCoofpqvMLX42s3h/EklNiIPoaeLp7+w==
+  dependencies:
+    is-what "^3.0.1"
 
 merge-descriptors@1.0.1, merge-descriptors@~1.0.0:
   version "1.0.1"
@@ -6085,6 +6111,25 @@ vueify@^9.0.0:
     vue-hot-reload-api "^2.0.1"
     vue-template-compiler "^2.0.0-alpha.8"
     vue-template-es2015-compiler "^1.2.2"
+
+vuex-easy-access@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/vuex-easy-access/-/vuex-easy-access-3.1.5.tgz#131bc31eb0deb7b7a32a0ca4bcc3dbb6fb02421e"
+  integrity sha512-aZtj9F7L0KYHhWgEQoZ9F2PkYysu3+E9Zy41FgpiBzPqX+mTSiFL8yUlL2j175bBgD48WCi9Ah0OhCEqA57F+g==
+  dependencies:
+    find-and-replace-anything "^1.2.0"
+    is-what "^3.0.1"
+    merge-anything "^2.2.0"
+
+vuex-easy-firestore@^1.20.2:
+  version "1.20.2"
+  resolved "https://registry.yarnpkg.com/vuex-easy-firestore/-/vuex-easy-firestore-1.20.2.tgz#efa2d45e0b4328605988c587fc54e0ae2cc0b3be"
+  integrity sha512-nrIyRmyZhAgIGzNqqdAdDDC0UBMrRphwJWchg5zfTmhpLqiSAUvkQZZv3x2Uzp8fPBnU7YbJ1YQHu5Vt9h60GA==
+  dependencies:
+    find-and-replace-anything "^2.0.0"
+    is-what "^3.1.1"
+    merge-anything "^2.2.0"
+    vuex-easy-access "^3.1.5"
 
 vuex@^3.0.1:
   version "3.0.1"
